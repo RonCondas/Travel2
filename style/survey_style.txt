@@ -1,0 +1,45 @@
+    /**Header Style**/
+    body{
+        background-color: white;
+        width: 100%;
+        margin: auto;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    header{
+        position: sticky ;
+        top: 0;
+        z-index: 999;
+        background-color: rgb(117, 171, 117);
+    }
+    
+    header img {
+        max-width: 65px;
+        align:left;
+        position:absolute;
+        top: -3% ;
+        left: 15%;
+        background-color: green;
+    }
+    
+    header h1{
+        text-align: center;
+        background-image: linear-gradient(to left, orange,yellow,blue,green);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color:transparent;
+        padding-top: 2%;
+    }
+    
+    
+        body {
+            width: 500px;
+            margin: 0 auto;
+            padding: 0 30px;
+            border: 3px solid greenyellow;
+        }
+        dt {
+            font-weight: bold;
+        }

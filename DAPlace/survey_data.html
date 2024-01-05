@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Survey Data</title>
+<link rel="stylesheet" href="../style/survey_style.css">
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+
+<body>
+    <header>
+        <header>
+         
+            <h1 >Beautiful Places In The World</h1>
+               <img src="../images/travel.png" alt="Travel Logo" width="80">
+               
+               <div class="wrapper">
+                   <div class="navigationDesktop">
+                      <nav>
+                         <ul>
+                            <li>
+                               <a href="#">Menu</a>
+                               <ul>
+                                  <li><a href="../index.html">Home</a></li>
+                                  <li><a href="../DAPlace/Azores.html">Azores</a></li>
+                                  <li><a href="../DAPlace/Rakotzbrucke.html">Rokotzbrucke</a></li>
+                                  <li><a href="../DAPlace/Kilimanjaro.html">Kilimanjaro</a></li>
+                                  <li><a href="../DAPlace/Wulingyuan.html">Wulingyuan</a></li>
+                                  
+                               </ul>
+                            </li>
+                          
+                            <li>
+                               <a href="#">Contact us</a>
+                               <ul>
+                                   <li><a href="../DAPlace/Contact.html">Contact us</a></li>
+                               </ul>
+                               </ul>
+                            </li>
+                            
+                      </nav>
+                   </div>
+                </div>
+               </nav>
+           </header>
+    </header>
+    <div class="inside">
+    <h1>Survey Data</h1>
+    <script>display_data();</script></div>
+</body>
+</html>

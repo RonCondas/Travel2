@@ -1,0 +1,124 @@
+    /**Header Style**/
+    body{
+        background-color: white;
+        width: 100%;
+        margin: auto;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    header{
+        position: sticky ;
+        top: 0;
+        z-index: 999;
+        background-color: rgb(117, 171, 117);
+    }
+    
+header img {
+    max-width: 65px;
+    align:left;
+    position:absolute;
+    top: -3% ;
+    left: 15%;
+    background-color: green;
+}
+    
+header h1{
+    text-align: center;
+    background-image: linear-gradient(to left, orange,yellow,blue,green);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    padding-top: 2%;
+}
+    
+    
+.inside {
+    width: 500px;
+    margin: 0 auto;
+    padding: 0 30px;
+    border: 3px solid rgb(179, 17, 92);
+}
+
+ dt {
+font-weight: bold;
+}
+
+.wrapper {
+		
+	min-height: 20%;
+	width: 100%;
+	position: relative;
+}
+
+.navigationDesktop {
+	background: rgb(117, 171, 117);
+}
+
+nav {
+	height: 40px;
+	width: 560px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 140%;
+	color: #112233;
+}
+
+nav a:hover {
+	background: rgb(74, 48, 8);
+	color: #f0f1f5;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	background:rgb(117, 171, 117);
+}
+
+nav ul ul li {
+	position: relative;
+	display: none;
+}
+
+nav ul ul ul {
+	display: none;
+}
+
+nav ul li:hover ul li {
+	display: block;
+	animation: navmenu 500ms forwards;
+}
+
+@keyframes navmenu {
+	0% {
+		opacity: 0;
+		top: 5px;
+	}
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+nav ul ul li:hover ul {
+	display: block;
+	position: absolute;
+	width: 140px;
+	left: 140px;
+	top: 0px;
+}
